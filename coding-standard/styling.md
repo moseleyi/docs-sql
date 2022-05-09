@@ -1,29 +1,4 @@
-# Basics
-
-### Indentation
-
-We use 2-space tab indentation
-
-```sql
-SELECT
-  partners.id             AS partner_id,
-  partners.image_url      AS image,
-  partners.partner_email  AS email,
-  partners.active         AS is_active
-FROM prod_db.partners
-```
-
-### Use of spaces
-
-For clarity and readability, use spaces in after commas, between numbers and mathematical signs
-
-`SUM(100 / 2)` instead of `SUM(100/2)`
-
-`IF(status = 'Active')` instead of  `IF(status='Active')`
-
-`COALESCE(created_at, started_at)` instead of `COALESCE(created_at,started_at)`
-
-### Styling
+# Styling
 
 ```sql
 WITH data AS (
@@ -75,7 +50,7 @@ FROM data
 
 Syntax option availability may differ from dialect to dialect, and their versions.
 
-#### Main keywords after which the references go to new line with indentation
+### Main keywords after which references go to new line with indentation
 
 ```sql
 SELECT
@@ -96,9 +71,7 @@ ORDER BY
   <field>
 ```
 
-Those are keywords that usually follow by a list of references to fields.
-
-#### Keywords that require "completion"
+### Keywords that require "completion" in the same line
 
 ```sql
 FROM <table>
@@ -108,16 +81,20 @@ PIVOT(AGG(<field>) FOR <field> IN (<value>, <value>)) <alias>
 LATERAL(TABLE())
 ```
 
-#### Exceptions
+### Exceptions
 
-If it's a simple `SELECT *` query that is used for multiple UNIONs, you can write it in one line, if it doesn't require you to list all the columns
+#### Simple SELECT
+
+If it's a simple `SELECT *` query that is used for multiple `UNION`s, you can write it in one line, if it doesn't require you to list all columns
 
 ```sql
 SELECT * FROM table_a UNION ALL
 SELECT * FROM table_b
 ```
 
-Keywords that are only followed by one number reference.
+#### Keywords followed by number
+
+If a keyword is followed by only one number or field reference, we can put it on the same line
 
 ```sql
 GROUP BY 1
@@ -125,7 +102,17 @@ ORDER BY 2
 LIMIT 100
 ```
 
-`JOIN` has many conditions and they can't be replaced with `USING`
+But if we have multiple fields, using indentation only from the second item can decrease readability
+
+```sql
+GROUP BY field, 
+  field2,
+  field3
+```
+
+#### Complicated JOINs
+
+If a JOIN has many conditions, putting them all in one line can lead to decrease in readability, therefore we can indent the conditions, starting from the second.
 
 ```sql
 FROM table
@@ -134,4 +121,3 @@ FROM table
                              AND t.country = table.country
                              AND t.currency = table.other_currency
 ```
-
