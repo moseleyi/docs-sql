@@ -10,7 +10,7 @@
 
 ## Modelling Principles
 
-* [Values like Statuses, Categories](modelling-principles/values-like-statuses-categories.md)
+* [Machine and Human-readable values](modelling-principles/machine-and-human-readable-values.md)
 * [CTE - Common Table Expressions](modelling-principles/cte-common-table-expressions.md)
 * [Comments](modelling-principles/comments.md)
 

@@ -1,4 +1,10 @@
-# Values like Statuses, Categories
+---
+description: >-
+  How do we keep things like statuses, categories, as machine-readable values in
+  DB but present it in human-readable form.
+---
+
+# Machine and Human-readable values
 
 There are two aspects of string values like statuses, categories, reasons, or other descriptive columns that are repeated in a table.
 
