@@ -10,7 +10,7 @@
 
 ## Modelling Principles
 
-* [Machine and Human-readable values](modelling-principles/machine-and-human-readable-values.md)
+* [Machine vs Human Readable Values](modelling-principles/machine-vs-human-readable-values.md)
 * [CTE - Common Table Expressions](modelling-principles/cte-common-table-expressions.md)
 * [Comments](modelling-principles/comments.md)
 

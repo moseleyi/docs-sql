@@ -4,7 +4,7 @@ description: >-
   DB but present it in human-readable form.
 ---
 
-# Machine and Human-readable values
+# Machine vs Human Readable Values
 
 There are two aspects of string values like statuses, categories, reasons, or other descriptive columns that are repeated in a table.
 
