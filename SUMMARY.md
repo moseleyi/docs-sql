@@ -10,6 +10,7 @@
 
 ## Modelling Principles
 
+* [Values like Statuses, Categories](modelling-principles/values-like-statuses-categories.md)
 * [CTE - Common Table Expressions](modelling-principles/cte-common-table-expressions.md)
 * [Comments](modelling-principles/comments.md)
 
