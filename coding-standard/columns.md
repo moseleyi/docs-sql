@@ -12,7 +12,7 @@ References to man-made entities: coluns, aliases, names of CTEs, tables, schemas
 
 `WITH cte_name AS ()`
 
-:exclamation:_Snowflake and its drivers DISPLAY everything in uppercase but it doesn't mean it lives as uppercase in the underlaying structure. If you create a column as uppercase, you will still be able to  use the lowercase reference, however in `information_schema`, it will show up as uppercase, which may have an impact on queries to the tables in that schema._ :exclamation:__
+:exclamation:_Snowflake and its drivers DISPLAY everything in uppercase but it doesn't mean it lives as uppercase in the underlaying structure. If you create a column as uppercase, you will still be able to  use the lowercase reference, however in `information_schema`, it will show up as uppercase, which may have an impact on queries to the tables in that schema._ :exclamation:
 
 ### Always snake\_case
 
